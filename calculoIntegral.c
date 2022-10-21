@@ -13,7 +13,7 @@ double somatorio(double n, double a,double b){
 
     for(int i = 0; i < n; i++){
         area += fun((2*a+delta)/2); // Calcula o ponto médio e passa para a função
-        a+= delta; // passa para o proxima estremidade do retângulo 
+        a+= delta; // passa para a proxima extremidade do retângulo 
     }
     return area * delta; // Calcula base x altura e retorna o resultado
 }
