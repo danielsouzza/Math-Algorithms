@@ -21,6 +21,18 @@ double log2(double x)
     return log(10 * x + 5);
 }
 
+// Logₐx
+double log3(double x)
+{
+    return logbase(x, 10);
+}
+
+// Log(cx)
+double log4(double x)
+{
+    return log(5) + log(x);
+}
+
 // Somatório de integração
 double somatorio(double n, double a, double b, double (*func)(double))
 {
@@ -43,9 +55,13 @@ void main()
     tipo_func *vetor_func[4]; // Array de função
     vetor_func[0] = log1;
     vetor_func[1] = log2;
+    vetor_func[2] = log3;
+    vetor_func[3] = log4;
 
     printf("Digite o número de retângulos e o intervalo[a,b]: ");
     scanf("%lf %lf %lf", &n, &a, &b);
     printf("A área aproximadamente para log1: %f\n", somatorio(n, a, b, vetor_func[0]));
     printf("A área aproximadamente para log2: %f\n", somatorio(n, a, b, vetor_func[1]));
+    printf("A área aproximadamente para log3: %f\n", somatorio(n, a, b, vetor_func[2]));
+    printf("A área aproximadamente para log4: %f\n", somatorio(n, a, b, vetor_func[3]));
 }
