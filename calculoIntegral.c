@@ -78,25 +78,26 @@ void main()
         system("clear");
 
         switch (--choose){
-        case 0:
-            printf("«««««««««««« f(x) = logₐ(x) »»»»»»»»»»\n");
-            printf("Base → ");
-            scanf("%d",&integer);
-            break;
-        case 1:
-            printf("«««««««««««« f(x) = log(k.x) »»»»»»»»»»\n");
-            printf("Constante(k) → ");
-            scanf("%d",&integer);
-            break;
-        case 2:
-            printf("«««««««««««« f(x) = log²(x) »»»»»»»»»»\n");
-            break;
-        case 3:
-            printf("«««««««««««« f(x) = log(a.x + b) »»»»»»»»»»\n");
-            printf("A - B → ");
-            scanf("%d %d",&a,&b);
-            break;
+            case 0:
+                printf("«««««««««««« f(x) = logₐ(x) »»»»»»»»»»\n");
+                printf("Base → ");
+                scanf("%d",&integer);
+                break;
+            case 1:
+                printf("«««««««««««« f(x) = log(k.x) »»»»»»»»»»\n");
+                printf("Constante(k) → ");
+                scanf("%d",&integer);
+                break;
+            case 2:
+                printf("«««««««««««« f(x) = log²(x) »»»»»»»»»»\n");
+                break;
+            case 3:
+                printf("«««««««««««« f(x) = log(a.x + b) »»»»»»»»»»\n");
+                printf("A - B → ");
+                scanf("%d %d",&a,&b);
+                break;
         }
+
         if(choose != -1){
             printf("Número de retângulos→ ");
             scanf("%lf", &n);
@@ -105,5 +106,6 @@ void main()
             printf("\nIntegral = %f", somatorio(n,x1,x2,vetor_func[choose]));
             getchar();getchar();
         }
+        
     } while (choose != -1);
 }
